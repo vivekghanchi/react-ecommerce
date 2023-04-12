@@ -15,7 +15,9 @@
     "dev": "vite",
     "build": "vite build  && cd dist && cp index.html 404.html",
     "serve": "vite preview",
-    "test": "cross-env NODE_ENV=test jest --config=jest.config.json"
+    "test": "cross-env NODE_ENV=test jest --config=jest.config.json",
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d build"
   },
   "devDependencies": {
     "@vitejs/plugin-react": "^2.0.0",
@@ -56,7 +58,7 @@
   },
   "dependencies": {
     "@ant-design/icons": "^4.6.2",
-    "firebase": "^8.4.3",
+    "firebase": "^8.10.1",
     "formik": "^2.2.6",
     "history": "^4.10.0",
     "moment": "^2.29.1",
